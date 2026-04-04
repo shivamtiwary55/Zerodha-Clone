@@ -11,7 +11,7 @@ import Navbar from '../Navbar';
 function ProductPage() {
   return ( 
     <>
-      <Navbar />
+      
 
       <Hero/>
 
@@ -65,7 +65,7 @@ function ProductPage() {
         
       <Universe/>
 
-      <Footer />
+      
     </>
   );
 }

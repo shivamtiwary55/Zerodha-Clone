@@ -6,7 +6,7 @@ function Hero() {
       <div className='row text-center'>
         
         <img 
-          src="/Media/Images/HomeHero.png" 
+          src="Media\Images\homeHero.png" 
           alt="Hero Banner" 
           className='mb-5'
         />
