@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../media/images/logo.svg"; // ✅ import karo
 
 function Navbar() {
   return (
@@ -9,14 +8,17 @@ function Navbar() {
       style={{ backgroundColor: "#FFF" }}
     >
       <div className="container p-2">
+        
+        {/* LOGO */}
         <Link className="navbar-brand" to="/">
           <img
-            src={logo}   // ✅ yaha use karo
+            src="/Media/Images/logo.svg"   // ✅ correct (public folder path)
             style={{ width: "25%" }}
             alt="Logo"
           />
         </Link>
 
+        {/* TOGGLE BUTTON */}
         <button
           className="navbar-toggler"
           type="button"
@@ -26,25 +28,43 @@ function Navbar() {
           <i className="fa fa-bars"></i>
         </button>
 
+        {/* NAV LINKS */}
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-lg-0">
+            
             <li className="nav-item">
-              <Link className="nav-link active" to="/signup">Signup</Link>
+              <Link className="nav-link active" to="/signup">
+                Signup
+              </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link active" to="/about">About</Link>
+              <Link className="nav-link active" to="/about">
+                About
+              </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link active" to="/product">Product</Link>
+              <Link className="nav-link active" to="/product">
+                Product
+              </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link active" to="/pricing">Pricing</Link>
+              <Link className="nav-link active" to="/pricing">
+                Pricing
+              </Link>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link active" to="/support">Support</Link>
+              <Link className="nav-link active" to="/support">
+                Support
+              </Link>
             </li>
+
           </ul>
         </div>
+
       </div>
     </nav>
   );
