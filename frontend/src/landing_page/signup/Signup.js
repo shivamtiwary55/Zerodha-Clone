@@ -64,8 +64,8 @@ const Signup = () => {
         <div className="col-7 text-center mt-5">
           <img
           className="mt-5 p-5"
-            src="media\images\signup.png"
-            alt=""
+            src="Media\Images\signup.png"
+            alt="signup image"
             style={{width:"100%"}}
           />
         </div>

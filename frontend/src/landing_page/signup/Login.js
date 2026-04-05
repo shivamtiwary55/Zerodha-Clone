@@ -68,7 +68,7 @@ const Login = () => {
         <img
         className="mt-5 p-5"
           src="media\images\signup.png"
-          alt=""
+          alt="signup image"
           style={{width:"100%"}}
         />
       </div>
