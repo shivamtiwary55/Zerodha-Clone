@@ -6,14 +6,20 @@ const Menu = () => {
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
 
   const handleMenuClick = (index) => setSelectedMenu(index);
-  const handleProfileClick = () => setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  const handleProfileClick = () =>
+    setIsProfileDropdownOpen(!isProfileDropdownOpen);
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
   return (
     <div className="menu-container">
-      <img src="/Media/Images/logo.svg" alt="Logo" style={{ width: "50px" }} />
+      {/* ✅ FIX: better alt text */}
+      <img
+        src="/Media/Images/logo.svg"
+        alt="Zerodha logo"
+        style={{ width: "50px" }}
+      />
 
       <div className="menus">
         <ul>
@@ -64,9 +70,9 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              className={selectedMenu === 6 ? activeMenuClass : menuClass}
+              className={selectedMenu === 5 ? activeMenuClass : menuClass}
               to="/apps"
-              onClick={() => handleMenuClick(6)}
+              onClick={() => handleMenuClick(5)}
             >
               Apps
             </Link>
@@ -78,6 +84,7 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">ZU</div>
           <p className="username">USERID</p>
+
           {isProfileDropdownOpen && (
             <div className="dropdown">
               <Link to="/profile">Profile</Link>
